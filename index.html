@@ -31,7 +31,7 @@
             align-items: center;
             padding: 20px;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         body::before {
@@ -107,7 +107,7 @@
             position: relative;
             z-index: 1;
             animation: slideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         @keyframes slideIn {
@@ -746,36 +746,22 @@
             z-index: 1;
         }
 
-        /* Нижняя часть — прокручиваемая область с ползунком на мобильном */
+        /* Нижняя часть — на мобильном прокручивается вместе со всей страницей */
         .bottom-scroll-area {
             position: relative;
             z-index: 2;
         }
 
         @media (max-width: 768px) {
-            .bottom-scroll-area {
-                max-height: 50vh;
+            body {
                 overflow-y: auto;
-                overflow-x: hidden;
+                align-items: flex-start;
+                padding-top: 16px;
+                padding-bottom: 24px;
                 -webkit-overflow-scrolling: touch;
-                padding-right: 6px;
-                margin-right: -6px;
-                scrollbar-width: thin;
-                scrollbar-color: var(--primary) rgba(17, 48, 96, 0.15);
             }
-            .bottom-scroll-area::-webkit-scrollbar {
-                width: 8px;
-            }
-            .bottom-scroll-area::-webkit-scrollbar-track {
-                background: rgba(17, 48, 96, 0.1);
-                border-radius: 4px;
-            }
-            .bottom-scroll-area::-webkit-scrollbar-thumb {
-                background: var(--primary);
-                border-radius: 4px;
-            }
-            .bottom-scroll-area::-webkit-scrollbar-thumb:hover {
-                background: #0d2842;
+            .container {
+                overflow: visible;
             }
         }
 
