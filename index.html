@@ -606,6 +606,7 @@
             margin-bottom: 6px;
             font-weight: 500;
             animation: textReveal 0.6s ease-out 1s both;
+            text-align: center;
         }
 
         .position {
@@ -759,6 +760,11 @@
                 padding-top: 16px;
                 padding-bottom: 24px;
                 -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+            body::-webkit-scrollbar {
+                display: none;
             }
             .container {
                 overflow: visible;
@@ -837,12 +843,12 @@
     <div class="container">
         <div class="kazakh-pattern"></div>
         <div class="ornament-particles-inner">
-            <div class="ornament"></div>
-            <div class="ornament"></div>
-            <div class="ornament"></div>
-            <div class="ornament"></div>
-            <div class="ornament"></div>
-            <div class="ornament"></div>
+            <div class="ornament">✦</div>
+            <div class="ornament">❋</div>
+            <div class="ornament">✦</div>
+            <div class="ornament">❋</div>
+            <div class="ornament">✦</div>
+            <div class="ornament">❋</div>
         </div>
 
         <div class="lang-switcher">
@@ -904,7 +910,7 @@
         <div class="profile-section">
             <div class="name" data-text="name">Жаппасбаев Арман Серікұлы</div>
             <div class="phone"></div>
-            <div class="schedule" data-text="schedule">Қазақстан Республикасының Бас прокуратурасы</div>
+            <div class="schedule" data-text="schedule">Қазақстан Республикасының <br>Бас прокуратурасы</div>
             <div class="position" data-text="position">Байқоңыр қаласы прокурорының орынбасары</div>
         </div>
 
@@ -948,7 +954,7 @@
         const translations = {
             kz: {
                 name: 'Жаппасбаев Арман Серікұлы',
-                schedule: 'Қазақстан Республикасының <br>Бас прокуратурасы',
+                schedule: 'Қазақстан Республикасының Бас прокуратурасы',
                 position: 'Байқоңыр қаласы прокурорының орынбасары',
                 website: 'Сайт',
                 call: 'Қоңырау',
@@ -1082,9 +1088,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
